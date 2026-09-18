@@ -213,7 +213,7 @@ if run_analysis:
       cov_matrix = returns.cov() * 252
       risk_free_rate = 0.07
 
-      num_portfolios = 100000
+      num_portfolios = 10000
       results = np.zeros((3, num_portfolios))
       all_weights = np.zeros((num_portfolios, len(stock_data.columns)))
 
@@ -238,7 +238,7 @@ if run_analysis:
 
       # --- VISUALIZATION 2: Optimization Results ---
       st.markdown("---")
-      st.subheader("Optimization Results (100,000 Iterations)")
+      st.subheader("Optimization Results (10,000 Iterations)")
 
       opt_df = pd.DataFrame({
           "Stock": stock_data.columns,
